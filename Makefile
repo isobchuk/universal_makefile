@@ -45,11 +45,11 @@ $(BUILD_FOLDER)/%.o: %.c
 	$(CC) $(COMMONFLAGS) $(CFLAGS) $(WARNINGS) -MMD -c $< -o $@)
 
 $(BUILD_FOLDER):
-	mkdir $(addprefix $(BUILD_FOLDER)\, $(SOURCES))
+	$(shell mkdir $(addprefix $(BUILD_FOLDER)\, $(SOURCES)))
 
 # Searching for .d files for partly rebuilding
 include $(wildcard $(addprefix $(BUILD_FOLDER)/, $(patsubst   %.o,%.d,$(OBJ))))
 
 # Clean
 clean:
-	rmdir /s /q $(RESULT_FOLDER)
+	$(shell rmdir /s /q $(RESULT_FOLDER))
