@@ -10,7 +10,7 @@ Main Features:
 
 1. Use the target file to define the build configuration.
 2. Automatic search for .h, .hpp, .c, .cpp files:
-   - It is supposed that the application's .c and .cpp files are located in $(sources) folder and .h and .hpp files are located in $(includes). Also, it is possible to add sub-folders there (Automatic search for .h, .hpp, .c, .cpp files).
+   - It is supposed that the application's .c and .cpp files are located in sources folder and .h and .hpp files are located in includes. Also, it is possible to add sub-folders there (Automatic search for .h, .hpp, .c, .cpp files).
    - $(components) - folder for the other logical components (Automatic search for .h, .hpp, .c, .cpp files).
    - $(third_party) - folder for the external libs, warnings are disabled for this folder (Automatic search for .h, .hpp, .c, .cpp files).
 3. The git branch and commit can be added to the firmware with the corresponding flag.
